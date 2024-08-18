@@ -646,15 +646,17 @@ span{
     }
 
 
-    .footer{
+    /* .footer{
         flex-direction: column-reverse;
-    }
+    } */
 
 
-    .footer p{
+    /* .footer p{
         text-align: center;
         margin-top: 2rem;
-    }
+    } */
+
+    
  }
 
 
@@ -693,22 +695,13 @@ span{
         width: 100%;
     }
     #services{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-content: center;
-        width: 100%;
-        row-gap: 20px;
-        padding-left: 155px;
+        display: flex;
+        flex-direction: column;
     }
     #contact{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        justify-content: center;
-        width: 100%;
-        row-gap: 20px;
-        padding-left: 155px;
+        display: flex;
+        flex-direction: column;
+
     }
     
  }
