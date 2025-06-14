@@ -1,5 +1,4 @@
-/* @import url(); */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,26 +9,22 @@
     font-family: "poppins", sans-serif;
 }
 
-
-
-
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-
-
-
-body{
-    background-color: #000000;
-    color: white;
+body {
+    background-color: #000000; /* Background color for the body */
+    color: white; /* Default text color */
 }
 
 
 
+/* =============== HEADER SECTION =============== */
 
-.header{
+/* Styling the fixed header */
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -41,43 +36,31 @@ body{
     z-index: 100;
 }
 
-
-
-
-.header, .sticky{
-    border-bottom: .1rem solid #000000;
+.header, .sticky {
+    border-bottom: .1rem solid #000000; /* Border for the sticky header */
 }
 
-
-
-
-.logo{
+.logo {
     font-size: 2.5rem;
     color: white;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s ease; /* Smooth hover effect */
 }
 
-
-
-
-.logo span{
+.logo span {
     color: #5100ff;
-    text-shadow: 0 0 25px #5100ff;
+    text-shadow: 0 0 25px #5100ff; /* Glow effect for the span */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
 }
 
 
 
-
-.logo:hover{
-    transform: scale(1.1);
-}
-
-
-
-
-.navbar a{
+/* Navbar link styles */
+.navbar a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -86,104 +69,79 @@ body{
     border-bottom: 3px solid transparent;
 }
 
-
-
-
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
     color: #5100ff;
-    border-bottom: 3px solid#5100ff;
+    border-bottom: 3px solid #5100ff; /* Hover and active link styling */
 }
 
-
-
-
-#menu-icon{
+#menu-icon {
     font-size: 3.6rem;
     color: white;
-    display: none;
+    display: none; /* Hidden by default, used for mobile menu */
 }
 
 
 
+/* =============== HOME SECTION =============== */
 
-section{
+/* Styling for the home content */
+section {
     display: flex;
     justify-content: center;
     gap: 20px;
     align-items: center;
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    padding: 10rem 9% 2rem; /* Padding around the home section */
 }
 
-
-
-
-.home-content h1{
+.home-content h1 {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-
-
-
-.home-content h2{
+.home-content h2 {
     font-size: 5rem;
     font-weight: 700;
 }
 
-
-
-
-.image-container, .profile-pic{
+.image-container {
+    margin-left: 40px;
     width: 35vh;
-    animation: floatImage 4s ease-in-out infinite;
-
+    animation: floatImage 4s ease-in-out infinite; /* Animation for image floating */
 }
 
-
-
-@keyframes floatImage{
-    0%{
+@keyframes floatImage {
+    0% {
         transform: translatey(0);
     }
-    50%{
+    50% {
         transform: translateY(-2.4rem);
     }
-    100%{
+    100% {
         transform: translateY(0);
     }
-        
-  }
+}
 
-
-
-
-.home-content h3{
+.home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
 
-
-
-
-span{
+span {
     color: #5100ff;
 }
 
-
-
-
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
 
 
 
-
-.social-media a{
+/* Social media link styles */
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -198,20 +156,16 @@ span{
     transition: .5s ease;
 }
 
-
-
-
-.social-media a:hover{
+.social-media a:hover {
     background-color: #5100ff;
     color: #000000;
     box-shadow: 0 0 1rem #5100ff;
-    
 }
 
 
 
-
-.btn{
+/* Button styling */
+.btn {
     display: inline-block;
     border-radius: 4rem;
     padding: 1rem 2.8rem;
@@ -224,17 +178,11 @@ span{
     transition: .5s ease;
 }
 
-
-
-
-.btn:hover{
+.btn:hover {
     box-shadow: none;
 }
 
-
-
-
-.image-container{
+.image-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -242,10 +190,7 @@ span{
     text-align: right;
 }
 
-
-
-
-.profile-pic{
+.profile-pic {
     border-radius: 100%;
     border: 5px solid #5100ff;
     box-shadow: 0 0 100px #5100ff;
@@ -255,62 +200,44 @@ span{
 
 
 
+/* =============== ABOUT SECTION =============== */
 
-.heading{
+.heading {
     font-size: 4.5rem;
 }
 
-
-
-
-.about-content h2{
-   text-align: left;
-   line-height: 1.2;
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
 }
 
-
-
-
-.about-content h3{
+.about-content h3 {
     font-size: 2.6rem;
 }
 
-
-
-
-.about-content p{
+.about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-
 }
 
 
 
+/* =============== SERVICES SECTION =============== */
 
-.services h2{
-    
+.services h2 {
     margin-bottom: 5rem;
 }
 
-
-
-
-.services-box h3{
+.services-box h3 {
     font-size: 2.6rem;
 }
 
-
-
-
-.services-box p{
+.services-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
 
-
-
-
-.services-container{
+.services-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,10 +245,7 @@ span{
     gap: 2rem;
 }
 
-
-
-
-.services-container .services-box{
+.services-container .services-box {
     flex: 1 1 30rem;
     background-color: #323946;
     padding: 3rem 2rem 4rem;
@@ -331,54 +255,105 @@ span{
     transition: .5s ease;
 }
 
-
-
-
-.services-container .services-box:hover{
+.services-container .services-box:hover {
     border-color: #5100ff;
     transform: scale(1.02);
     box-shadow: 0 0 7rem #5100ff;
 }
 
-
-
-
-.services-box i{
+.services-box i {
     font-size: 7rem;
     color: #5100ff;
 }
 
 
+/* =============== PORTFOLIO SECTION ============= */
 
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
 
-.contact h2{
-    margin-bottom: 3rem;
+.portfolio-box {
+  flex: 1 1 30rem;
+  background-color: #111;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 0.3rem solid #1f242d;
+  transition: 0.5s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.portfolio-box:hover {
+  border-color: #5100ff;
+  transform: scale(1.02);
+  box-shadow: 0 0 7rem #5100ff;
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-layer {
+  padding: 1rem;
+  background: #000000;
+  text-align: center;
+  color: #fff;
+}
+
+.portfolio-layer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-layer p {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-layer a {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #5100ff;
+  transition: 0.3s;
+}
+
+.portfolio-layer a:hover {
+  color: #5100ff;
 }
 
 
 
 
-.contact form{
+
+/* =============== CONTACT SECTION =============== */
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
     max-width: 70rem;
     margin: 1rem auto;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-
-
-
-.contact form, .input-box{
+.contact form, .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-
-
-
 .contact form, .input-box input,
-.contact form, textarea{
+.contact form, textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
@@ -386,27 +361,31 @@ span{
     background-color: #323946;
     border-radius: .8rem;
     margin: .7rem;
+    border: .3rem solid #1f242d;
+    transition: .5s ease;
+}
+
+.contact form, .input-box input:hover,
+.contact form, textarea:hover {
+    border-color: #5100ff;
+    
 }
 
 
-
-
-.contact form, textarea{
+.contact form, textarea {
     resize: none;
 }
 
-
-
-
-.contact form, .btn{
+.contact form, .btn {
     margin-top: 2rem;
     cursor: pointer;
 }
 
 
 
+/* =============== FOOTER SECTION =============== */
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -415,17 +394,11 @@ span{
     background-color: #323946;
 }
 
-
-
-
-.footer-text p{
+.footer-text p {
     font-size: 1.6rem;
 }
 
-
-
-
-.footer-iconTop a{
+.footer-iconTop a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -435,97 +408,76 @@ span{
     transition: .5s ease;
 }
 
-
-
-
-.footer-iconTop a:hover{
+.footer-iconTop a:hover {
     box-shadow: 0 0 1rem #5100ff;
 }
 
-
-
-
-.footer-iconTop a i{
+.footer-iconTop a i {
     font-size: 2.4rem;
     color: white;
-
 }
 
 
 
+/* =============== BREAKPOINTS (Media Queries) =============== */
 
-
-
-
-/* BREAKPOINTS */
+/* For screens smaller than 1200px */
 @media (max-width: 1200px) {
-    html{
+    html {
         font-size: 55%;
     }
 }
 
-
-
-
-
+/* For screens smaller than 991px */
 @media (max-width: 991px) {
-    .header{
+    .header {
         padding: 2rem 3%;
     }
 
-    section{
+    section {
         padding: 10rem 3% 2rem;
     }
 
-    .services{
+    .services {
         padding-bottom: 7rem;
-    } 
-
-    .contact{
-        min-height: auto;
-    } 
-
-    .footer{
-        padding: 2rem 3%;
     }
 
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
 }
-
-
-
 
 /* For screens smaller than or equal to 768px (Mobile) */
 @media (max-width: 768px) {
-    /* Profile picture adjustments */
     .image-container, .profile-pic {
-      width: 60vw;      /* Reduce profile image size to fit better */
-      height: auto;     /* Maintain aspect ratio */
-      margin-top: 2rem; /* Ensure there's enough space between navbar and profile picture */
+        width: 60vw; /* Reduce profile image size to fit better */
+        height: auto;
+        margin-top: 2rem;
     }
-  
-    /* For the home section profile image */
+
     #profile-pic-home {
-      width: 100%;   /* Adjust width for smaller size */
-      height: auto; /* Maintain aspect ratio */
-      border-radius: 50%;  /* Keep it circular */
-      margin: 0 auto; /* Center it */
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 auto;
     }
-  
-    /* Make the navbar active section smaller */
+
     .navbar.active {
-      max-height: 30vh;  /* Ensure the navbar doesn't cover too much of the screen */
+        max-height: 30vh;
     }
-  
-    /* Adjust other parts for mobile, if needed */
+
     #home {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
-      justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
     }
-  
+
     #about {
-      padding-top: 3rem; /* Adjust space between navbar and about section */
+        padding-top: 3rem;
     }
-  }
-  
+}
