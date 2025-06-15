@@ -282,7 +282,7 @@ span {
   flex: 1 1 30rem;
   background-color: #111;
   border-radius: 2rem;
-  overflow: hidden;
+  overflow: visible;
   border: 0.3rem solid #1f242d;
   transition: 0.5s ease;
   box-shadow: 0 0 0 transparent;
@@ -309,24 +309,29 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .portfolio-layer p {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-top: 1.5rem;
 }
 
 .portfolio-layer a {
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #5100ff;
   transition: 0.3s;
+  margin-top: 2rem;
+  text-shadow: 0 0 5px #5100ff, 0 0 10px #5100ff;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .portfolio-layer a:hover {
   color: #5100ff;
+  text-shadow: 0 0 10px #5100ff, 0 0 20px #5100ff;
+  transform: scale(1.1);
 }
 
 
@@ -417,67 +422,137 @@ span {
     color: white;
 }
 
-
-
-/* =============== BREAKPOINTS (Media Queries) =============== */
-
-/* For screens smaller than 1200px */
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
+#menu-icon {
+  display: none;
 }
 
-/* For screens smaller than 991px */
-@media (max-width: 991px) {
-    .header {
-        padding: 2rem 3%;
-    }
 
-    section {
-        padding: 10rem 3% 2rem;
-    }
 
-    .services {
-        padding-bottom: 7rem;
-    }
+  @media (max-width: 768px) {
 
-    .contact {
-        min-height: auto;
-    }
+    /* Mobile view */
+    #menu-icon {
+    display: block;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    z-index: 1001;
+  }
 
-    .footer {
-        padding: 2rem 3%;
-    }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar a {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+    section.home,
+    section.About {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .home-content,
+  .about-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .image-container,
+  .about-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* ← profile image on the left */
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: auto;
+    margin-left: -20px;
+  }
+
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .portfolio {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .portfolio h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .portfolio-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding-bottom: 1rem;
+  }
+
+  .portfolio-box img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+  }
+
+
+  .Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Contact h2 {
+    order: -1; /* Moves h2 above the form */
+    margin-bottom: 2rem;
+  }
+
+  .Contact form {
+    order: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
 }
 
-/* For screens smaller than or equal to 768px (Mobile) */
-@media (max-width: 768px) {
-    .image-container, .profile-pic {
-        width: 60vw; /* Reduce profile image size to fit better */
-        height: auto;
-        margin-top: 2rem;
-    }
 
-    #profile-pic-home {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
 
-    .navbar.active {
-        max-height: 30vh;
-    }
 
-    #home {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        justify-content: center;
-    }
 
-    #about {
-        padding-top: 3rem;
-    }
-}
+
+
+
+

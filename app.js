@@ -7,7 +7,14 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-
+// Close menu when a nav link is clicked
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+   // Animate collapse
+    navbar.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+  });
+});
 
 /* scroll sections active link */
 let sections = document.querySelectorAll('section');
