@@ -471,8 +471,15 @@ span {
 
   @media (max-width: 768px) {
 
-    .home-content {
-    margin-top: 7rem; 
+    .logo,
+    .navbar {
+    display: none;
+    }
+
+    #menu-icon {
+    display: inline-block;
+    font-size: 2rem; /* Optional: make icon bigger */
+    cursor: pointer;
     }
 
     #menu-icon {
