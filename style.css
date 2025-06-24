@@ -165,30 +165,54 @@ span {
 
 
 /* Button styling */
-.btn {
-    display: inline-block;
-    border-radius: 4rem;
-    padding: 1rem 2.8rem;
-    background-color: #5100ff;
-    color: #000000;
-    box-shadow: 0 0 5rem #5100ff;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
-}
+  .btn {
+  display: inline-block;
+  border-radius: 4rem;
+  padding: 1rem 2.8rem;
+  background-color: #5100ff;
+  color: black;
+  box-shadow: 0 0 5rem #5100ff;
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+  }
 
-.btn:hover {
-    box-shadow: none;
-}
+  .btn {
+  box-shadow: none;
+  animation: mobile-glow 2s infinite alternate;
+  }
 
-.image-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: right;
-}
+  .btn:hover {
+  box-shadow: none;
+  }
+
+  @keyframes mobile-glow {
+    0% {
+      box-shadow: 0 0 5px #5100ff;
+    }
+    100% {
+      box-shadow: 0 0 10px #5100ff, 0 0 15px #5100ff;
+    }
+  }
+
+  .resume-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  }
+
+
+
+  .image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  }
 
 .profile-pic {
     border-radius: 100%;
@@ -493,6 +517,16 @@ span {
     gap: 1.5rem;
     }
 
+    .resume-buttons {
+    flex-direction: column;
+    align-items: center; /* Centered on mobile */
+    }
+
+    .resume-buttons .btn {
+    width: 140px;
+    text-align: center;
+    }
+
     .home-content,
     .about-content {
     flex: 1;
@@ -595,6 +629,11 @@ span {
     order: 0;
     width: 100%;
     padding: 0 1.5rem;
+    }
+
+    .btn {
+     box-shadow: none;
+     animation: mobile-glow 2s infinite alternate;
     }
 }
 
