@@ -471,7 +471,10 @@ span {
 
   @media (max-width: 768px) {
 
-    /* Mobile view */
+    .home-content {
+    margin-top: 7rem; 
+    }
+
     #menu-icon {
     display: block;
     font-size: 2.5rem;
