@@ -67,17 +67,8 @@ body {
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
-    animation: text-glow 2.5s infinite alternate;
 }
 
-@keyframes text-glow {
-  0% {
-    text-shadow: 0 0 5px #5100ff, 0 0 10px #5100ff;
-  }
-  100% {
-    color: #5100ff;
-  }
-}
 
 .navbar a:hover{
     color: #5100ff;
@@ -177,6 +168,7 @@ span {
   .btn {
   display: inline-block;
   border-radius: 4rem;
+  border: none;
   padding: 1rem 2.8rem;
   background-color: #5100ff;
   color: black;
@@ -184,8 +176,7 @@ span {
   font-size: 1.6rem;
   letter-spacing: .1rem;
   font-weight: 600;
-  transition: .5s ease;
-  box-shadow: none;
+  transition: .7s ease;
   animation: mobile-glow 2s infinite alternate;
   }
 
@@ -210,8 +201,6 @@ span {
   margin-top: 2rem;
   }
 
-
-
   .image-container {
   position: relative;
   display: flex;
@@ -227,8 +216,6 @@ span {
     height: 400px;
     width: 300px;
 }
-
-
 
 /* =============== ABOUT SECTION =============== */
 
@@ -391,8 +378,9 @@ span {
 
 /* =============== CONTACT SECTION =============== */
 
-  .contact h2 {
+  .heading {
    margin-bottom: 3rem;
+   text-align: center;
   }
 
   .contact form {
@@ -442,10 +430,10 @@ span {
   font-size: 1.2rem;
 }
 
-#form-status p {
+  #form-status p {
   opacity: 1;
   transition: opacity 0.5s ease;
-}
+  }
 
 /* =============== FOOTER SECTION =============== */
 
@@ -662,6 +650,10 @@ span {
     .btn {
      box-shadow: none;
      animation: mobile-glow 2s infinite alternate;
+    }
+
+    .footer-iconTop {
+      margin-top: 1.5rem;
     }
 }
 
