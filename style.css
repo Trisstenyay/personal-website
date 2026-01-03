@@ -215,6 +215,7 @@ span {
     box-shadow: 0 0 100px #5100ff;
     height: 400px;
     width: 300px;
+    object-fit: cover;
 }
 
 /* =============== ABOUT SECTION =============== */
